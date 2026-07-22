@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');  
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font: 18px/145% system-ui, 'Segoe UI', Roboto, sans-serif;
+  font: 18px/145% 'Nunito', system-ui, 'Segoe UI', Roboto, sans-serif;
   letter-spacing: 0.18px;
   color-scheme: light;
   --bg: #e8f3ff;
   --text: #030304;
   --text-h: #08060d;
-  --fg: #3557ff;
+  --fg: #1f75ff;
   --card: #ffffff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
@@ -22,7 +24,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 html.dark {
   color-scheme: dark;
   --bg: #0f172a;

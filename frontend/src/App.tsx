@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import MenuBar from './components/MenuBar.tsx'
 import './index.css'
 
 function App() {
@@ -9,9 +10,8 @@ function App() {
   }, [dark])
 
   return (
-    <div className="min-h-screen bg-bg">
-
-
+    <div className="min-h-screen bg-bg text-text transition-colors duration-200">
+      <MenuBar dark={dark} onToggleDark={() => setDark((prev) => !prev)} />
     </div>
   )
 }

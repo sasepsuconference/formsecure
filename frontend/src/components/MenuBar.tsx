@@ -6,7 +6,6 @@ import {
   Sun,
 } from 'lucide-react'
 
-import '../index.css'
 type MenuBarProps = {
   dark: boolean
   onToggleDark: () => void

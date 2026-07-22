@@ -10,9 +10,8 @@ function App() {
   }, [dark])
 
   return (
-    <div className="min-h-screen bg-bg">
-      <MenuBar></MenuBar>
-
+    <div className="min-h-screen bg-bg text-text transition-colors duration-200">
+      <MenuBar dark={dark} onToggleDark={() => setDark((prev) => !prev)} />
     </div>
   )
 }

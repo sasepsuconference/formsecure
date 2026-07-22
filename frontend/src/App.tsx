@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import MenuBar from './components/MenuBar.tsx'
 import './index.css'
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-bg">
-
+      <MenuBar></MenuBar>
 
     </div>
   )

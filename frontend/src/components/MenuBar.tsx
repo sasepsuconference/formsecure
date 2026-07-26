@@ -6,15 +6,15 @@ import {
   Sun,
 } from 'lucide-react'
 
+import { logout } from '../auth/connection'
+
 type MenuBarProps = {
   dark: boolean
   onToggleDark: () => void
+  setSignedIn: (signIn: boolean) => void
 }
 
-export default function MenuBar({ dark, onToggleDark }: MenuBarProps) {
-  const login = () => {
-    // LOGIN LOGIC HERE
-  }
+export default function MenuBar({ dark, onToggleDark, setSignedIn}: MenuBarProps) {
 
   return (
     <div className="flex w-full h-[75px] flex-row justify-between items-center gap-4 bg-card p-4 text-fg shadow-sm pl-10 pr-10 transition-colors duration-200">
@@ -33,11 +33,14 @@ export default function MenuBar({ dark, onToggleDark }: MenuBarProps) {
         )}
         <Settings
           className="h-6 w-6 hover:scale-105 active:scale-95"
-          onClick={login}
+          onClick={() => {}}
         />
         <User
           className="h-6 w-6 hover:scale-105 active:scale-95"
-          onClick={login}
+          onClick={() => {
+            logout()
+            setSignedIn(false);
+          }}
         />
       </div>
     </div>

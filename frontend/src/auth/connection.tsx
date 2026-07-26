@@ -10,14 +10,23 @@ if (!supabaseUrl || !supabasePublishableKey) {
 export const supabase = createClient(supabaseUrl, supabasePublishableKey);
 
 export async function login() {
-  await supabase.auth.signInWithOAuth({
-    provider: 'google',
-    options: {
-      redirectTo:
-        "https://sasepsuconference.github.io/formsecure/",
+  const redirectTo =
+    "https://sasepsuconference.github.io/formsecure/";
 
+  console.log("OAUTH REDIRECT:", redirectTo);
+
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo,
     },
-  })
+  });
+
+  console.log("OAuth response:", data);
+
+  if (error) {
+    console.error(error);
+  }
 }
 
 export async function logout() {

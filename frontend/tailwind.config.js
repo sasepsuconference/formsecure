@@ -11,6 +11,7 @@ export default {
         border: 'var(--border)',
         bg: 'var(--bg)',
         text: 'var(--text)',
+        'success': 'var(--success)',
         'text-h': 'var(--text-h)',
         'code-bg': 'var(--code-bg)',
       },

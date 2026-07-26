@@ -14,7 +14,12 @@ export async function getCurrentUser(): Promise<User | null> {
 }
 
 export async function getCurrentUserId(): Promise<string | null> {
-  const user = await getCurrentUser();
+  try {
+    const currentUser = await getCurrentUser();
+    return currentUser?.id ?? null;
+  } catch (e) {
+    console.log(e)
+  }
 
-  return user?.id ?? null;
+  return null;
 }

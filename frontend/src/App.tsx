@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     const loadUser = async () => {
       try {
-        const user = getCurrentUser();
+        const user = await getCurrentUser();
         if (!user) {
           setSignIn(false);
         }
@@ -36,18 +36,17 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen bg-bg text-text transition-colors duration-200">
       <MenuBar dark={dark} onToggleDark={() => setDark((prev) => !prev)} setSignedIn={setSignIn} />
-      {(() => {
+      {signedIn ? (() => {
         switch (page) {
           case 'edit':
             return <p>Data loaded successfully!</p>;
           case 'respond':
             return <p>An error occurred.</p>;
           default:
-            return <div></div>; // dashboard
+            return <Dashboard/>;
         }
-      })()}
-      {!signedIn && <Login setSignedIn={setSignIn} />}
-      <Dashboard></Dashboard>
+      })() : <Login setSignedIn={setSignIn} />
+      }
     </div>
   )
 }

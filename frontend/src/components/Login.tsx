@@ -1,10 +1,7 @@
 import { useState } from "react"
 import { login } from "../auth/connection"
-type LoginProps = {
-  setSignedIn: (signedIn: boolean) => void;
-};
 
-export default function Login({ setSignedIn }: LoginProps) {
+export default function Login() {
   const [isLoading, setIsLoading] = useState(false)
 
   const handleGoogleSignIn = async () => {

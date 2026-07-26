@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen bg-bg text-text transition-colors duration-200">
       <MenuBar dark={dark} onToggleDark={() => setDark((prev) => !prev)} setSignedIn={setSignIn} />
-      {signedIn ? <Dashboard/> : <Login setSignedIn={setSignIn} />
+      {signedIn ? <Dashboard/> : <Login/>
       }
     </div>
   )

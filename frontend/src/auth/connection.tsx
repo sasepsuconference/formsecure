@@ -11,7 +11,12 @@ export const supabase = createClient(supabaseUrl, supabasePublishableKey);
 
 export async function login() {
   await supabase.auth.signInWithOAuth({
-    provider: 'google'
+    provider: 'google',
+    options: {
+      redirectTo:
+        "https://sasepsuconference.github.io/formsecure/",
+
+    },
   })
 }
 

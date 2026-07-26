@@ -264,7 +264,7 @@ export default function FormPage({ form, setForm }: FormPageProps) {
                 default:
                   return (
                     <textarea
-                      className="border border-fg rounded rounded-xl w-full"
+                      className="border border-fg p-1 rounded rounded-xl w-full h-8"
                       value={
                         typeof answers[question.id] === "string"
                           ? answers[question.id]

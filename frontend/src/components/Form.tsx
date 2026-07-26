@@ -284,7 +284,7 @@ export default function FormPage({ form, setForm }: FormPageProps) {
         ))}
         <button
           type="submit"
-          className="block w-full max-w-3xl mx-auto px-2 py-2 my-5 bg-card hover:scale-[1.02] active:scale-[0.98]"
+          className="block w-full max-w-3xl mx-auto px-2 py-2 my-5 bg-fg hover:scale-[1.02] active:scale-[0.98]"
         >
           Submit
         </button>
